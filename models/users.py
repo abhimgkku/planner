@@ -19,10 +19,11 @@ class UserSignIn(BaseModel):
     email: EmailStr
     password: str
 
-    schema_extra = {
-        "example": {
-            "email": "abhinav@gmail.com",
-            "password": "securepassword123",
-            "events": []
+    class Config:
+        schema_extra = {
+            "example": {
+                "email": "abhinav@gmail.com",
+                "password": "securepassword123",
+                "events": []
+            }
         }
-    }
